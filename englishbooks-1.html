@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>english books</title>
+    <style>
+        body{  
+        background-color:#b6a08e;
+        }
+   
+    .book-container {   
+      
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap; 
+    }
+   .book-item {
+    border: 2px solid black;
+        width: 210px;
+        padding: 10px; 
+      
+    }
+    
+    details {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #3a281c;
+    border-radius: 5px;
+}
+
+summary {
+    font-weight: bold;
+    color: #d7b390;
+    cursor: pointer;
+}
+summary:hover {
+    color: #fefbfb;
+}
+ p{
+    color: #fefbfb;
+}
+button {
+      background-color: #6b3600;
+      color: #beb5af;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background-color: #f9e9d6;
+      color: #554437;
+    }
+    a button{
+        
+     position: fixed;
+      background-color: #492501;
+      color: #f4e7de;
+      border: none;
+      width: 10%;
+      height: 13%;
+      border-radius: 10%;
+      top: 10px;
+      z-index: 1000;
+      right: 9px;
+
+    }
+   </style>
+   <script>
+    function ajouterAuPanier(titre, prix) {
+      let panier = JSON.parse(localStorage.getItem("panier")) || [];
+      panier.push({ titre, prix });
+      localStorage.setItem("panier", JSON.stringify(panier));
+      
+    }
+  </script>
+</head>
+<body>
+        <div class="book-container">
+            <a href="panier.html"><button>Voir le panier 🛒</button></a>
+         <div class="book-item">
+               <img src="./books photo/3d8fab8f697537693889d55ca42a832b.jpg"  width="200px" height="300xp">
+            <u><h2><i>Harry Potter and  </i></h2><h2><i> the philospher's</i></h2></u><u><h2><i> stone</i></h2></u> 
+           <b> Writer :</b> JK.Rowling
+            <h3>Price : 1200 DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Harry Potter and the Philosopher\'s Stone', 1200)">Add to cart</button>
+            <details>
+                <summary>Description</summary>
+                <p>
+                Harry discovers he’s a wizard, attends Hogwarts,explore a new world ,and faces Voldemort who killed his parents for the first time .
+            </p>
+            </details>
+         </div>
+        
+         <div class="book-item">
+              <img src="./books photo/8ef24e520587766245292631c27094e0.jpg" width="200px"  height="300xp">
+         <u><h2><i>Harry Potter and </i></h2><h2><i>the chamber of the</i></h2></u><u><h2><i> secrets</i></h2></u>
+         <B> Writer :</B>  JK.Rowling
+         <h3>Price : 1220 DA</h3>
+          <button class="buy-btn" onclick="ajouterAuPanier('Harry Potter and the chamber of the secrets', 1220)">Add to cart</button></a>
+         <details>
+            <summary>Description</summary>
+            <p>
+             Harry and his friend searching for a hidden chamber at Hogwarts who releases a monster thereatening students 
+                </p>
+            </details>
+         </div>
+         <div class="book-item">
+                <img src="./books photo/35d52f1120ccd540abafcf8a66f692d9.jpg" width="200px" height="300xp">
+             <u><h2><i>Harry Potter and </i></h2><h2><i>the prizoner of</i></h2></u><u><h2><i>Azkabane</i></h2></u>
+             <B> Writer :</B> JK.Rowling
+             <h3>Price : 1220 DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier ('Harry Potterand the prizoner of Azkabane ', 1220)">Add to cart</button></a>
+             <details>
+                <summary>Description</summary>
+                <p>
+                    Harry realized the truth about his parents’s past and his godfather, Sirius Black.
+                </p>
+             </details>
+         </div>
+         <div class="book-item">
+                <img src="./books photo/e118a4852d321aaa8f03a2270ca0193a.jpg" width="200px"  height="300xp">
+            <u><h2><i>Harry Potter and </i></h2><h2><i>the goblet of</i></h2></u><u><h2><i> fire</i></h2></u>
+            <B> Writer :</B> JK.Rowling
+            <h3>Price : 1300 DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier ('Harry Potter and the goblet of fire' ,1300)">Add to cart</button></a>
+            <details>
+                <summary>Description</summary>
+                <p>
+                     Harry is forced into a dangerous wizarding tournament and faces alone Voldemort’s return.
+                    </p>
+            </details>
+          </div>
+        
+             <div class="book-item">
+                <img src="./books photo/2d13e1610c050919612f7c3167a1296c.jpg" width="200px"  height="300xp">
+                <u><h2><i>Harry Potter and </i></h2><h2><i>the order of the</i></h2></u><u><h2><i> phonex</i></h2></u>
+                <B>Writer :</B>JK.Rowling
+                <h3>Price : 1300 DA</h3>
+                <button class="buy-btn" onclick="ajouterAuPanier ('Harry Potter and the order of the phonex', 1300)">Add to cart</button></a>
+                <details>
+                    <summary>Description</summary>
+                    <p>
+                        Harry struggles against the Ministry of Magic for Voldmort's return, while forming a student rebellion.</p>
+                </details>
+             </div>
+             <div class="book-item">
+                 <img src="./books photo/f1203ef5bccdcc8b44c19d5677e6f527.jpg" width="200px" height="300xp">
+                 <u><h2><i>Harry Potter and the </i></h2> <h2><i>half blood prince</i></h2></u>
+                 <B>Writer :</B>JK.Rowling
+                 <h3>Price : 1300 DA</h3>
+                 <button class="buy-btn" onclick="ajouterAuPanier('Harry Potter and the half blood prince',1300) ">Add to cart</button></a>
+                  <details>
+                     <summary>Description</summary>
+                        <p>
+                          Secrets about Voldemort’s immortality are uncovered, and tragedy strikes at Hogwarts.</p>
+                  </details>
+             </div>
+              <div class="book-item">
+                  <img src="./books photo/66daf7b0aae2ccdcdf59b81024a0e14f.jpg" width="200px"  height="300xp">
+                 <u><h2><i>Harry Potter and the</i></h2> <h2><i>deathly hallows</i></h2></u>
+                 <B>Writer :</B>JK.Rowling
+                 <h3>Price : 1400 DA</h3>
+                 <button class="buy-btn" onclick="ajouterAuPanier('Harry Potter and the deathly hallows',1400)" >Add to cart</button></a>
+                 <details>
+                     <summary>Description</summary>
+                     <p>
+                        Harry and his friends go on a quest to defeat Voldemort in the final battle for the wizarding world.</p> 
+                 </details>
+              </div>
+             <div class="book-item">
+                  <img src="./books photo/4246aee8c148014d49bf976c6ef6017a.jpg" width="200px" height="300xp">
+                 <u><h2><i>The Cruel prince </i></h2></u><u><h2><i>(prince of evil)</i></h2></u>
+                 <B>Writer :</B> Holly Black
+                 <h3>Price : 1200 DA</h3>
+                 <button class="buy-btn" onclick="ajouterAuPanier('The Cruel prince ',1200)">Add to cart</button></a>
+                 <details>
+                     <summary>Description</summary>
+                     <p>
+                        Jude a mortal girl is taken to the land of Faerie and raised among magical deceitful beings. She fights for power and survival in a court full of intrigue, manipulation,and betrayal against the cruel Prince Cardan.
+                     </p>
+                    </details>
+             </div>
+             <div class="book-item">
+                 <img src="./books photo/a35490d87c7df9c2494a29d14fb9af00.jpg" width="200px" height="300xp">
+                <u><h2><i>The Mountain is  </i></h2></u><u><h2><i>you</i></h2></u> 
+                <B>Writer :</B>Brianna Wiest
+                <h3>Price : 1400 DA</h3>
+                <button class="buy-btn"  onclick="ajouterAuPanier('The Mountain is you',1400)">Add to cart</button></a>
+                <details>
+                    <summary>Description</summary>
+                    <p>
+                    self-sabotage.Why we do it, when we do it, and how to stop doing it? for good.Coexisting but conflicting needs create self-sabotaging behaviors.</p>
+                </details>
+             </div>
+            <div class="book-item">
+                 <img src="./books photo/eaf45f14a27d58e31a8c4f4148686a67.jpg" width="200px" height="300xp">
+                <u><h2><i>Psychology of </i></h2></u><u><h2><i> money</i></h2></u>
+                <B>Writer :</B>Morgan Housel
+                <h3>Price : 1000 DA</h3>
+                <button class="buy-btn" onclick="ajouterAuPanier('Psychology of money',1000)">Add to cart</button></a>
+                <details>
+                    <summary>Description</summary>
+                    <p>
+                     <p>This book explores how emotions, personal history and human behavior shape financial decisions more than logic or intelligence. It offerstimeless lessons on wealth and happiness</p>
+                </details>
+
+            </div>
+        </div>
+        
+    
+
+</body>
+</html>

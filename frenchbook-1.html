@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French books</title>
+    <style>
+      body{  
+      background-color:#b6a08e;
+      }
+ 
+  .book-container {   
+    
+      display: flex;
+      justify-content:center;
+      flex-wrap: wrap; 
+  }
+ .book-item {
+  border: 2px solid black;
+      width: 210px;
+      padding: 10px; 
+    
+  }
+  
+  details {
+  margin-top: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #3a281c;
+  border-radius: 5px;
+}
+
+summary {
+  font-weight: bold;
+  color: #d7b390;
+  cursor: pointer;
+}
+summary:hover {
+  color: #fefbfb;
+}
+p{
+  color: #fefbfb;
+}
+button {
+    background-color: #793e03;
+    color: #beb5af;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #f9e9d6;
+    color: #554437;
+  }
+   a button{
+        
+     position: fixed;
+      background-color: #492501;
+      color: #f4e7de;
+      border: none;
+      width: 10%;
+      height: 13%;
+      border-radius: 10%;
+      top: 10px;
+      z-index: 1000;
+      right: 9px;
+
+    }
+ </style>
+ <script>
+    function ajouterAuPanier(titre, prix) {
+      let panier = JSON.parse(localStorage.getItem("panier")) || [];
+      panier.push({ titre, prix });
+      localStorage.setItem("panier", JSON.stringify(panier));
+      
+    }
+  </script>
+</head>
+<body>
+<div class="book-container">
+    <a href="panier.html"><button>Voir le panier 🛒</button></a>
+        <div class="book-item">
+            <img src="./books photo/4c551308e7c83e3341e83121246b4b12.jpg"  width="200px" height="300px">
+            <u><h2><i>L'alchimiste</i></h2></u>
+            <b>Auteur:  Paulo Coelho</b>
+            <h3>Prix:600 DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier ('Lalchimiste', 600)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                 Santiago, jeune berger andalou, part à la recherche d'un trésor enfoui au pied des Pyramides. Lorsqu'il rencontre l'Alchimiste dans le désert, celui-ci lui apprend à écouter son coeur, à lire les signes du destin et, par-dessus tout, à aller au bout de son rêve. 
+                </p> 
+            </details>
+        </div>
+          <div class="book-item">
+            <img src="./books photo/d5e5b4f2c730fab34d6591cbf7ec506a.jpg" width="200px" height="300px">
+              <u><h2><i>La peste</i></h2></u>
+              <b>Auteur:Albert Camus </b>
+              <h3>Prix:800 DA</h3>
+              <button class="buy-btn" onclick="ajouterAuPanier('La peste',800)">Ajouter au panier</button>
+              <details>
+                  <summary>Description </summary>
+                   <p>
+                      Quand la sonnerie a encore retenti, que la porte du box s'est ouverte, c'est le silence de la salle qui est monté vers moi, le silence, et cette singulière sensation que j'ai eue lorsque j'ai constaté que le jeune journaliste avait détourné les yeux.
+                    </p>
+              </details>
+          </div>
+           <div class="book-item">
+            <img src="./books photo/f9af73781a16b9d272d861b600c235d5.jpg"  width="200px" height="300px">
+             <u><h2><i>La chute</i></h2></u>
+             <b>Auteur:Albert Camus </b>
+             <h3>Prix:800 DA</h3>
+             <button class="buy-btn" onclick="ajouterAuPanier('La chute',800)">Ajouter au panier</button>
+             <details>
+                 <summary>Description </summary>
+                  <p>Imaginez la ville d'Oran, où les rats sont plus futés que les habitants. Ils meurent en masse, mais personne ne s'inquiète vraiment, jusqu'à ce que les humains commencent à tomber comme des mouches. Voilà, c'est la peste, et elle est là pour vous rappeler que la vie est absurde, mais aussi pour vous faire réfléchir à votre condition humaine
+                  </p>
+             </details>
+           </div>
+           <div class="book-item">
+            <img src="./books photo/8130inT26AL._SL1500_.jpg" width=200px height="300px">
+            <u><h2><i>L'étranger</i></h2></u>
+            <b>Auteur : Albert Camus</b>
+            <h3>Prix :600 DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('L\'étranger',800)">Ajouter au panier</button>
+            <details>
+                <summary>Description</summary>
+                <p>
+                  retrace l'histoire d'un homme ordinaire soumis à l'absurdité de l'existence et de la condition. Rédigé au passé, ce récit propose de suivre le parcours de Meursault, de l'annonce du décès de sa mère jusqu'à sa condamnation pour homicide, un an plus tard.
+                </p>
+            </details>
+           </div>
+           <div class="book-item">
+            <img src="./books photo/de916774818d4eeacd8d2d62031e12a1.jpg"  width="200px" height="300px">
+            <u><h2><i>Le fils de pauvre</i></h2></u>
+            <b>Auteur: Mouloud Feraoun</b>
+            <h3>Prix:700DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Le fils de pauvre',700)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                    Le roman raconte l'itinéraire de son enfance à travers l'histoire du jeune Fouroulou Menrad, son double, qui lutte pour améliorer sa condition sociale par l'instruction afin de ne pas être un simple berger comme ses semblables.
+                </p>
+            </details>
+           </div>
+           <div class="book-item">
+            <img src="./books photo/61j5Du0EzAL._SL1200_.jpg" width="200px" height="300px">
+            <u><h2><i>Les Misérables </i></h2></u>
+            <b>Auteur:Victor Hugo </b>
+            <h3>Prix:1000DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Les Misérables',1000)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                    Le roman présente une riche variété de styles de langage,  ce roman offre une exploration approfondie de la société et de l’histoire françaises, tout en abordant des thèmes universels tels que la justice, la rédemption et l’amour.    
+                </p>
+            </details>
+           </div>
+           
+           <div class="book-item">
+            <img src="./books photo/d7d66e01e8cb5a1c47d5537bcfb51cac.jpg"  width="200px" height="300px">
+            <u><h2><i>Voyage au bout de la nuit </i></h2></u>
+            <b>Auteur:Louis-Ferdinand </b>
+            <h3>Prix:700DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Voyage au bout de la nuit',700)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                    Ferdinand Bardamu, jeune rebelle, décide, par excès d'héroïsme, de s'engager dans la guerre contre les Allemands. Mais au front, c'est l'enfer et l'absurdité. Il perd vite son enthousiasme et découvre avec épouvante les horreurs de la guerre.
+                </p>
+            </details>
+           </div>
+           
+           <div class="book-item">
+            <img src="./books photo/f7eabeb790eecd48acaddc4aed3563b9.jpg"  width="200px" height="300px">
+            <u><h2><i>Le Petit Prince </i></h2></u>
+            <b>Auteur: Saint-Exupéry</b>
+            <h3>Prix:600DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Le petit prince',600)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                    C'est un petit garçon qui vit seul sur une planète lointaine. Amoureux d'une rose très capricieuse, il part en voyage sur d'autres planètes à la recherche d'amis. Il croise différents personnages : un homme d'affaires, un roi, un géographe, un renard… qui vont tous lui apprendre quelque chose.
+                </p>
+            </details>
+           </div>
+           <div class="book-item">
+            <img src="./books photo/808e1413ca68407abf989597a27911a6.jpg"  width="200px" height="300px">
+            <u><h2><i>Nedjma </i></h2></u>
+            <b>Auteur:Kateb Yacine</b>
+            <h3>Prix:600DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('Nedjma',600)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>
+                    Histoire de quatre jeunes hommes (Mustapha, Lakhdar, Rachid, Mourad) dans l'Algérie coloniale qui tombent amoureux de Nedjma, fille d'un Algérien et d'une Française
+                </p> 
+            </details> 
+           </div> 
+           <div class="book-item">
+            <img src="./books photo/ef67c7351e33ea481122d2474527e5e6.jpg"  width="200px" height="300px">
+            <u><h2><i>La terre et le sang </i></h2></u>
+            <b>Auteur:Mouloud Feraoun</b>
+            <h3>Prix:600DA</h3>
+            <button class="buy-btn" onclick="ajouterAuPanier('La terreet le sang',600)">Ajouter au panier</button>
+            <details>
+                <summary>Description </summary>
+                <p>Le document raconte l'arrivée d'une Parisienne nommée dans un village kabyle avec son compagnon Amer. Le couple rencontre beaucoup de curiosité des villageois à leur arrivée. ensuite leur visite chez la mère d'Amer, Kamouma, et les salutations des villageois.
+                </p>
+            </details>
+           </div>
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site De Livre</title>
+    <link rel="stylesheet" href="accuiel.css" />
+</head>
+<body>
+    <div class="logo" >
+        
+       <img src="./books photo/Design sans titre.png" class="logo">
+        <div class="image-avec-titre">
+            
+          <i><h1 class="titre-sur-image" >Bienvenu au Reading Store</h1></i>
+          
+    <img src="./books photo/IMG_20250415_193218_061.jpg"alt="Image pleine page" class="image">
+</div>
+    <form class="language-form" onsubmit="return redirectToLanguage()"style="text-align:center;">
+        
+        <h1 style="margin-bottom: 15px;">Choisie une langue</h1>
+        <select id="language">
+            <option value="">Choisir une langue</option> 
+            <option value="frenchbook-1.html">Français</option>
+            <option value="englishbooks-1.html">English</option>
+            <option value="arabbooks-1.html">Arabe</option>
+        </select>
+        <button type="submit" class="valider"><strong>Valider</strong></button>
+    </form>
+      
+    <script>
+        function redirectToLanguage() {
+            const selectedLang = document.getElementById("language").value;
+            if (selectedLang) {
+                window.location.href = selectedLang;
+            } else {
+                alert("Veuillez choisir une langue.");
+            }
+            return false; 
+        }
+    </script>
+
+
+
+   <div class="boite">
+
+    <h1 style="margin-top: 8px;"> Commandez</h1><br>
+     <a href="commande1.html" class="btn-commander" >Commander</button></a>
+
+   </div>
+
+        <div class="contacts">
+          <h3>  Vous pouvez nous joindre sur :</h3> <br>
+          <p><b>Facebook:</b>Penser_trouvez2025</p><br>
+         <p><b>Instagram:</b>Penser_trouvez</p><br>
+          <p><b>Email :</b> Penser Trouver@gmail.com</p><br>
+         <p><b>Tél :</b>06 12 34 56 78</p>
+        </div>

@@ -1,0 +1,131 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+        background-color: #b19274;
+        width: 50px;
+        height: 10vh;
+        margin: 0;
+      }
+
+      .image-avec-titre {
+        position: fixed;
+        background-image: url('./IMG_20250415_193218_061.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        color: rgb(2, 2, 2);
+      }
+
+      .titre-sur-image {
+      position: fixed;
+      top: 50px;
+      left: 45%;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    
+      color: #dad9d9;
+      z-index: 1;
+    }
+
+    .logo{
+      position: fixed;
+      top: 5px;
+      left: 0px;
+      width: 100px;
+      height: 70px;
+      z-index: 11;
+    }
+
+    #langue {
+      left: 500px;
+      color: #22201c;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      background-color: #733f0a;
+      border: 5px;
+      height: 300px;
+    }
+
+    .valider {
+      border: 7px;
+      left: 20%;
+    }
+    form {
+      position: fixed;
+      top: 200px;
+      left: 400px;
+      background-color: #be946a;
+      float: left;
+      padding: 10px;
+      border: 2px solid #e0e0e0;
+      width: 22%;
+      height: 18%;
+    }
+
+    
+    .boite {
+      position: fixed;
+      top: 220px;
+      right: 180px;
+      width: 22%;
+      height: 18%;
+      
+      border: 2px solid #e0e0e0;
+      background-color: #be946a;
+      
+       text-align: center;
+       gap: 20px;
+    }
+    .btn-commander {
+     position: fixed;
+      right: 250px;
+      color: #000;
+      border: 2px solid #000;
+      margin: 20px;
+      height: 3%;
+      width: 9%;
+      bottom: 340px;
+    }
+
+    .image {
+      width: 100%;
+      position: fixed;
+      bottom: 0%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .contacts {
+      padding: 20px;
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      top: 500px;
+      left: 15px;
+      background-color: #be946a;
+      border: 2px solid black;
+    }
+
+    .valider {
+      background-color: #d4b18f;
+    }
+  select{
+    background-color: #d8b08c;
+    color: black;
+    border: 2px solid #000;
+  }
+
+
+
+
+
+
+
+

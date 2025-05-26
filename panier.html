@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Panier</title>
+  <link rel="stylesheet" href="panier.css">
+
+</head>
+<body>
+  <h1>🛒 Mon Panier</h1>
+  <div id="contenuPanier"></div>
+  <button onclick="viderPanier()">Vider le panier</button><br><br>
+
+  <a href="Formulaire-1.html"><button class="informations">Entrer vos informations</button></a>
+
+  <script>
+    let panier = JSON.parse(localStorage.getItem("panier")) || [];
+    let contenu = document.getElementById("contenuPanier");
+
+    if (panier.length === 0) {
+      contenu.innerHTML = "<p>Votre panier est vide.</p>";
+    } else {
+      let html = "<ul>";
+      let total = 0;
+      panier.forEach((item, i) => {
+        html += `<li>${item.titre} - <span dir="ltr">${item.prix} DA</span> <button onclick="supprimer(${i})">Supprimer</button></li>`;
+        total += item.prix;
+      });
+      html += "</ul><p><strong>Total: " + total + " DA</strong></p>";
+      contenu.innerHTML = html;
+    }
+
+    function supprimer(index) {
+      panier.splice(index, 1);
+      localStorage.setItem("panier", JSON.stringify(panier));
+      location.reload();
+    }
+
+    function viderPanier() {
+      localStorage.removeItem("panier");
+      location.reload();
+    }
+  </script>
+</body>
+</html>
